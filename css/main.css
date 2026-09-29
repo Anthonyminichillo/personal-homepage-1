@@ -1,0 +1,272 @@
+/* ============================================================
+   Design tokens
+   ============================================================ */
+:root {
+  --color-bg: #f7f8fa;
+  --color-surface: #ffffff;
+  --color-text: #1c1e21;
+  --color-muted: #5b6270;
+  --color-accent: #2b5490;
+  --color-accent-soft: #dbe6f4;
+  --color-terminal-bg: #0f1117;
+  --color-terminal-text: #7ce38b;
+
+  --font-heading: "Georgia", "Iowan Old Style", serif;
+  --font-body: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "SF Mono", "Menlo", "Consolas", monospace;
+
+  --max-width: 1100px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  line-height: 1.6;
+}
+
+a {
+  color: var(--color-accent);
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ============================================================
+   Nav
+   ============================================================ */
+.site-nav {
+  background-color: var(--color-text);
+  color: white;
+  padding: 16px 0;
+}
+
+.site-nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.site-nav__brand {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+}
+
+.site-nav__links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.site-nav__links a {
+  color: #f1efe9;
+  text-decoration: none;
+}
+
+.site-nav__links a:hover,
+.site-nav__links a:focus-visible {
+  text-decoration: underline;
+}
+
+/* ============================================================
+   Hero / terminal typewriter
+   ============================================================ */
+.hero {
+  padding: 56px 0;
+}
+
+.terminal {
+  background-color: var(--color-terminal-bg);
+  color: var(--color-terminal-text);
+  font-family: var(--font-mono);
+  border-radius: 8px;
+  padding: 24px;
+  max-width: 720px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+.terminal__bar {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.terminal__dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.terminal__dot--red { background-color: #ff5f56; }
+.terminal__dot--yellow { background-color: #ffbd2e; }
+.terminal__dot--green { background-color: #27c93f; }
+
+.terminal__line {
+  white-space: pre-wrap;
+  min-height: 1.4em;
+}
+
+.terminal__cursor {
+  display: inline-block;
+  width: 8px;
+  background-color: var(--color-terminal-text);
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+/* ============================================================
+   Skill constellation
+   ============================================================ */
+.constellation-section {
+  padding: 40px 0;
+}
+
+.constellation {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  height: 340px;
+  background-color: var(--color-terminal-bg);
+  border-radius: 8px;
+  margin: 0 auto;
+}
+
+.constellation__star {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: #dbe6f4;
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+  transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+.constellation__star:hover,
+.constellation__star.is-active {
+  background-color: #ffd166;
+  transform: translate(-50%, -50%) scale(1.6);
+}
+
+.constellation__label {
+  position: absolute;
+  transform: translate(-50%, 10px);
+  color: #cfd6e4;
+  font-size: 0.75rem;
+  white-space: nowrap;
+}
+
+.constellation__line {
+  stroke: #ffd166;
+  stroke-width: 1.5;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.constellation__line.is-visible {
+  opacity: 0.8;
+}
+
+/* ============================================================
+   Projects (scroll reveal)
+   ============================================================ */
+.projects-section {
+  padding: 40px 0;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+.project-card {
+  background-color: var(--color-surface);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.project-card.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.project-card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+
+/* ============================================================
+   Live GitHub repos
+   ============================================================ */
+.github-section {
+  padding: 40px 0;
+  background-color: var(--color-accent-soft);
+}
+
+.github-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  list-style: none;
+  padding: 0;
+}
+
+.github-list li {
+  background-color: var(--color-surface);
+  border-radius: 6px;
+  padding: 14px;
+}
+
+.github-list .repo-name {
+  font-weight: bold;
+}
+
+.github-list .repo-meta {
+  font-size: 0.85rem;
+  color: var(--color-muted);
+}
+
+/* ============================================================
+   Footer
+   ============================================================ */
+.site-footer {
+  padding: 24px 0;
+  text-align: center;
+  color: var(--color-muted);
+  font-size: 0.9rem;
+}
+
+/* ============================================================
+   Responsive
+   ============================================================ */
+@media (max-width: 600px) {
+  .hero {
+    padding: 32px 0;
+  }
+  .terminal {
+    padding: 16px;
+  }
+}

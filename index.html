@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sree Rachnae Shyam — Portfolio</title>
+
+    <meta name="author" content="Sree Rachnae Shyam" />
+    <meta
+      name="description"
+      content="Personal portfolio of Sree Rachnae Shyam, showcasing projects, skills, and how to get in touch."
+    />
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml" />
+
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <nav class="site-nav">
+      <div class="container">
+        <span class="site-nav__brand">Sree Rachnae Shyam</span>
+        <ul class="site-nav__links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="ai-generated.html">Fun Page</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main>
+      <!-- HERO: typewriter terminal -->
+      <section class="hero">
+        <div class="container">
+          <div class="terminal" id="terminal">
+            <div class="terminal__bar">
+              <span class="terminal__dot terminal__dot--red"></span>
+              <span class="terminal__dot terminal__dot--yellow"></span>
+              <span class="terminal__dot terminal__dot--green"></span>
+            </div>
+            <div id="terminalOutput"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ SKILL CONSTELLATION ============ -->
+      <section class="constellation-section">
+        <div class="container">
+          <h2>Skills</h2>
+          <p>Hover a star to see which projects use that skill.</p>
+          <div class="constellation" id="skillConstellation"></div>
+        </div>
+      </section>
+
+      <!-- ============ PROJECTS (scroll reveal) ============ -->
+      <section class="projects-section">
+        <div class="container">
+          <h2>Projects</h2>
+          <div class="projects-grid">
+            <article class="project-card" data-skills="HTML/CSS,JavaScript">
+              <img
+                src="img/project-placeholder-1.png"
+                alt="Screenshot placeholder for Project One"
+              />
+              <h3>Evaluating Fairness-Accuracy Trade-offs in Automated Decision Systems </h3>
+              <p>Trained 3 ML classifiers on 30,162 records (up to 86.4% accuracy, F1: 0.70) and built a fairness evaluation
+                pipeline measuring DPD and EOD across sex and race, surfacing 0% TPR for minority groups in baseline models.</p>
+              <p>Implemented 2 bias mitigation interventions (threshold adjustment, sample reweighting) reducing EOD by up to
+                99.6% with under 4.3% accuracy loss.</p>
+              <p>Technologies: Python, scikit-learn, NumPy, Pandas, Matplotlib, Jupyter</p>  
+              <a href="#" class="btn-link">View project &rarr;</a>
+            </article>
+
+            <article class="project-card" data-skills="Python,SQL">
+              <img
+                src="img/project-placeholder-2.png"
+                alt="Screenshot placeholder for Project Two"
+              />
+              <h3>Freelance Project Bidding & Management System</h3>
+              <p>Built a full-stack Java + MySQL application with role-based dashboards (Client & Freelancer), supporting
+                end-to-end workflows from project posting and bidding to contract management and payments</p>
+              <p>Engineered a 3NF schema with 9 tables, 3 stored procedures, 3 functions, and 4 triggers for automated business
+                logic, with SHA-256 security, SQL injection prevention, and MVC-inspired architecture.</p>
+              <p>Technologies: Java, MySQL, JDBC, Java Swing, Apache Maven, Git, GitHub, JUnit</p>  
+              <a href="#" class="btn-link">View project &rarr;</a>
+            </article>
+
+            <article class="project-card" data-skills="React,JavaScript">
+              <img
+                src="img/project-placeholder-3.png"
+                alt="Screenshot placeholder for Project Three"
+              />
+              <h3>Mind Body-In Sync: Your personal yoga companion</h3>
+              <p>Designed and trained a CNN-based system (VGG16) for real-time yoga pose estimation and posture correction,
+                generating accuracy metrics and personalized feedback via web and mobile applications.</p>
+              <p>Optimized inference latency for real-time usage and evaluated model performance across diverse pose inputs.</p>
+              <p>Technologies: Python, JavaScript, HTML, CSS, Java, Firebase, TensorFlow, Keras, NumPy, Pandas, Matplotlib, PIL</p>  
+              <a href="https://github.com/shyamrachna25/Mind_BodyInSync-Yoga-Classifier" class="btn-link">View project &rarr;</a>
+            </article>
+
+            <article class="project-card" data-skills="React,JavaScript">
+              <img
+                src="img/project-placeholder-4.png"
+                alt="Screenshot placeholder for Project Three"
+              />
+              <h3>Real-time Facial Emotion Recognition using Deep Learning</h3>
+              <p>Built an end-to-end deep learning pipeline using MobileNetV2 and CNNs for real-time facial emotion recognition
+                across single and multi-face inputs, covering preprocessing, training, evaluation, and inference.</p>
+              <p>Conducted exploratory data analysis and visualized performance metrics to interpret trends and model behavior.</p>
+              <p>Technologies: Python, TensorFlow, scikit-learn, Google Colab, Jupyter</p>  
+              <a href="https://github.com/shyamrachna25/Realtime-Face-Emotion-Recognition-Tensorflow" class="btn-link">View project &rarr;</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ LIVE GITHUB REPOS ============ -->
+      <section class="github-section">
+        <div class="container">
+          <h2>Recent GitHub Activity</h2>
+          <ul class="github-list" id="githubRepoList"></ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>
+          <a href="mailto:shyam.sr@northeastern.edu">shyam.sr@northeastern.edu</a> ·
+          <a href="mailto:shyam.rachna25@gmail.com">shyam.rachna25@gmail.com</a> ·
+          <a href="https://github.com/shyamrachna25" target="_blank" rel="noopener">GitHub</a> ·
+          <a href="https://www.linkedin.com/in/shyamrachna25/" target="_blank" rel="noopener">LinkedIn</a>
+        </p>
+        <p>&copy; 2026 Sree Rachnae Shyam. Built with vanilla HTML, CSS &amp; ES6+.</p>
+      </div>
+    </footer>
+
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>
