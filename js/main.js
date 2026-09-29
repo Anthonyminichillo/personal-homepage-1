@@ -1,7 +1,7 @@
 import { TypewriterEffect } from "./typewriter.js";
 import { initConstellation } from "./constellation.js";
 import { loadGithubRepos } from "./githubrepos.js";
-import { initScrollReveal } from "./scrollReveal.js";
+import { initScrollReveal } from "./scrollreveal.js";
 
 // ---- 1. Terminal typewriter hero ----
 const terminalTarget = document.querySelector("#terminalOutput");
