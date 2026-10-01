@@ -6,22 +6,15 @@ Sree Rachnae Shyam
 
 ## Class Link
 
-[Link to the course page / syllabus — add your actual course URL here]
+(https://johnguerra.co/classes/webDevelopment_online_fall_2026/)
 
 ## Project Objective
 
-A personal portfolio homepage built entirely with vanilla HTML5, CSS3, and
-ES6+ JavaScript modules — no backend, no component libraries, no jQuery.
-The goal is to give visitors (recruiters, classmates, collaborators) a fast,
-honest overview of who I am, what I've built, and how to reach me.
+A personal portfolio homepage built entirely with vanilla HTML5, CSS3, and ES6+ JavaScript modules — no backend, no component libraries, no jQuery. The goal is to give visitors (recruiters, classmates, collaborators) a fast, honest overview of who I am, what I've built, and how to reach me.
 
-The site includes four original interactive components (see "Creative
-Additions" below); the final build keeps [N of them / all of them — update
-once you've decided which to keep].
+The site includes four original interactive components (see "Creative Additions" below); the final build keeps all four.
 
 ## Screenshot
-
-[Add a screenshot of the homepage here once content is filled in, e.g.:]
 
 ![Homepage screenshot](img/screenshot.png)
 
@@ -79,7 +72,7 @@ Four original ES6+ components were built for this assignment:
 │   └── scrollReveal.js
 ├── img/
 │   ├── favicon.svg
-│   └── project-placeholder-*.svg
+│   └── project-placeholder-*.png
 ├── design/
 │   ├── design-document.md
 │   └── mockups/
