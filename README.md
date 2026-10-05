@@ -15,7 +15,7 @@ A personal portfolio homepage built entirely with vanilla HTML5, CSS3, and ES6+ 
 The site includes four original interactive components (see "Creative Additions" below); the final build keeps all four.
 
 ## Screenshot
-
+This is the homepage that you see when opening my website. This will be what you are looking for!
 ![Homepage screenshot](img/screenshot.png)
 
 ## Instructions to Build / Run Locally
